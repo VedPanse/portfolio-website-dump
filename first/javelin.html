@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ved Panse | javelinLang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "SF Pro Text", "Myriad Set Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Icons", "Apple Legacy Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            background-color: white;
+            line-height: 1.5;
+        }
+
+        .header {
+            font-size: 12px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: 0em;
+            padding-right: 2%;
+            display: inline-block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            word-break: initial;
+            background-color: #444444;
+            width: 100%;
+            color: white;
+            padding: 0px 17px;
+        }
+
+        .header a {
+            float: center;
+            color: #f5f5f7;
+            text-align: center;
+            padding-right: 92px;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .ahref {
+            text-decoration: none;
+        }
+
+        .ahref:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            height: 26px;
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -.021em;
+            font-family: "SF Pro Text", "Myriad Set Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Icons", "Apple Legacy Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            background-color: #0070c9;
+            background: -webkit-gradient(linear, left top, left bottom, from(#42a1ec), to(#0070c9));
+            background: -webkit-linear-gradient(#42a1ec, #0070c9);
+            background: linear-gradient(#42a1ec, #0070c9);
+            border-color: #07c;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            min-width: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 3px;
+            padding-bottom: 4px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            border-bottom: 1px solid #d2d2d7;
+            color: #86868b;
+            padding: 0px 22px;
+            font-size: 12px;
+            background-color: #f5f5f7;
+            text-align: left;
+            line-height: 1.33337;
+        }
+
+        .content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header" style="padding: 15px;">
+        <p>Choose another country or region to see content specific to your location.</p>
+    </div>
+    <div class="header"
+        style="color: #F5F5F7; background-color: #000000CC; font-size: 15px; float: center; text-align: center; -webkit-font-smoothing: antialiased; padding: 10px;">
+        <a href="#" style="font-size: 15px;">Documentation</a>
+        <a href="#" style="font-size: 15px;">About</a>
+        <a href="#" style="font-size: 15px;">Updates</a>
+        <a href="#" style="font-size: 15px;">Blog</a>
+        <a href="#" style="font-size: 15px;">Q&A</a>
+        <a href="#" style="font-size: 15px;">Download</a>
+    </div>
+    <div class="header"
+        style="background-color: #f5f5f7; font-size: 15px; float: center; text-align: center; -webkit-font-smoothing: antialiased; padding: 0px;">
+        <p style="color: #1D1D1F;"><a href="#" style="color: #0066CC; padding-right: 0px; font-size: 15px;"
+                class="ahref">Version 1</a> out for download.</p>
+    </div><br><br>
+    <div width="100%" height="100%" style="overflow: hidden; float:center; text-align:center;">
+        <h2 style="font-size: 48px;
+line-height: 1.08349;
+font-weight: 600;
+letter-spacing: -.002em; text-align: center;">javelinLang</h2>
+        <h3 style="font-size: 24px;
+line-height: 1.16667;
+font-weight: 400;
+letter-spacing: .009em; text-align: center;">The notes-taking language</h3>
+        <p style="color: #86868b; text-align: center;">Take down notes, or program an application that can do so.</p>
+        <br>
+
+        <div class="row">
+            <div class="column" style="text-align: right;">
+                <p><a href="#" class="ahref" style="color: #0066CC; font-size: 19px;">Download &#62;</a></p>
+            </div>
+            <div class="column" style="text-align: left;">
+                <p><a href="#" class="ahref" style="color: #0066CC; font-size: 19px;">View Updates &#62;</a></p>
+            </div>
+        </div>
+
+    </div><br>
+
+    <div class="content">
+        <h1>What is javelinLang</h1>
+        <p>javelinLang is a software that allows you to take notes, and make a program according to your syntax to take
+            notes. It offers a very easy programming syntax which can be easily understood by children over the age of 10 years.</p>
+    </div>
+
+    <br><br>
+    <div class="footer">
+        <p><br>
+            1. My name is Ved Panse.<br><br>
+            2. This is just a replication of Apple's original website.<br><br>
+            3. This is really good.<br><br>
+            4. This section is actually for policy and terms of service.<br><br>
+            5. Comment if you like it.
+        </p>
+    </div>
+
+</body>
+
+</html>

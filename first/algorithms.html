@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Ved Panse | Algorithms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        var wrap = $("#wrap");
+
+        wrap.on("scroll", function (e) {
+
+            if (this.scrollTop > 147) {
+                wrap.addClass("fix-search");
+            } else {
+                wrap.removeClass("fix-search");
+            }
+
+        });
+    </script>
+    <script src="algorithm.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "SF Pro Text", "Myriad Set Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Icons", "Apple Legacy Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            background-color: white;
+            line-height: 1.5;
+        }
+
+        html,
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .header {
+            font-size: 12px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: 0em;
+            padding-right: 2%;
+            display: inline-block;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            word-break: initial;
+            background-color: #444444;
+            width: 100%;
+            color: white;
+            padding: 0px 17px;
+        }
+
+        .header a {
+            float: center;
+            color: #f5f5f7;
+            text-align: center;
+            padding-right: 92px;
+            text-decoration: none;
+            font-size: 12px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .header a:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        .header a.active {
+            background-color: dodgerblue;
+            color: white;
+        }
+
+        .ahref {
+            text-decoration: none;
+        }
+
+        .ahref:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            height: 26px;
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -.021em;
+            font-family: "SF Pro Text", "Myriad Set Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Icons", "Apple Legacy Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            background-color: #0070c9;
+            background: -webkit-gradient(linear, left top, left bottom, from(#42a1ec), to(#0070c9));
+            background: -webkit-linear-gradient(#42a1ec, #0070c9);
+            background: linear-gradient(#42a1ec, #0070c9);
+            border-color: #07c;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            min-width: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 3px;
+            padding-bottom: 4px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        .footer {
+            border-bottom: 1px solid #d2d2d7;
+            color: #86868b;
+            padding: 0px 22px;
+            font-size: 12px;
+            background-color: #f5f5f7;
+            text-align: left;
+            line-height: 1.33337;
+        }
+
+        .content {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: justify;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .content a {
+            color: #0066CC;
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #d2d2d7;
+            border-collapse: collapse;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .t {
+            text-transform: capitalize;
+        }
+
+        pre {
+            width: 60%;
+            padding: 20px;
+            background-color: #d2d2d7;
+            border-radius: 5px;
+        }
+
+        hr {
+            border-width: 0;
+            border-top: 1px solid #d2d2d7;
+        }
+
+        .fix-search .search {
+            position: fixed;
+            top: 10px;
+        }
+
+        .fix-search .search input {
+            width: 250px;
+        }
+
+        .inp {
+            display: none;
+        }
+
+        .centroid {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="header" style="padding: 15px;">
+        <p>Choose another country or region to see content specific to your location.</p>
+    </div> -->
+    <div class="header"
+        style="color: #F5F5F7; background-color: #000000CC; font-size: 15px; float: center; text-align: center; -webkit-font-smoothing: antialiased; padding: 10px; position: fixed; backdrop-filter:blur(5px);">
+        <a href="index.html" style="font-size: 15px;">My Website</a>
+        <a href="#bigo" style="font-size: 15px;">Big O</a>
+        <a href="#recursion" style="font-size: 15px;">Recursion</a>
+        <a><i class="fa fa-search" onclick="search()"></i> <span class="inp" id="inp"><input id="inputter" type="text"
+                    style="border-top: none; border-left: none; border-right: none; border-bottom: 1px solid white; background-color: transparent; color: #d2d2d7;"></span></a>
+
+    </div>
+    <!-- <div class="header" id="wrap"
+        style="background-color: #f5f5f7; font-size: 15px; float: center; text-align: center; -webkit-font-smoothing: antialiased; padding: 0px;">
+        <p style="color: #1D1D1F;"><a href="#" style="color: #0066CC; padding-right: 0px; font-size: 15px;"
+                class="ahref">Version 1</a> out for download.</p>
+    </div> -->
+    <br><br>
+    <br><br><br><br><br>
+    <div width="100%" height="100%" style="overflow: hidden; float:center; text-align:center;">
+        <h2 style="font-size: 48px;line-height: 1.08349;font-weight: 600;letter-spacing: -.002em; text-align: center;">
+            Algorithms</h2>
+        <h3 style="font-size: 24px;line-height: 1.16667;font-weight: 400;letter-spacing: .009em; text-align: center;">
+            The necessity now</h3>
+
+        <p style="color: #86868b; text-align: center; margin-left: 27.5%; margin-right: 27.5%;">I take you through my
+            understandings of Algorithms in the
+            simplest manner I can. This documentation was made by me for all-types of people, including those
+            without deep knowledge of any programming language.</p>
+        <p style="width: 25%; text-align: center; margin-left: 37%;"><span><a href="#content" class="ahref"
+                style="color: #0066CC; font-size: 19px;  text-align: center;">Read &#62;</a>&nbsp;
+            &nbsp;&nbsp; &nbsp;</span>
+        <span><a href="sources.html" class="ahref"
+                style="color: #0066CC; font-size: 19px;   text-align: center;">View Sources
+                &#62;</a></span></p>
+
+        <br>
+
+        <!-- <div class="row">
+            <div class="column" style="text-align: right;">
+                <p><a href="#content" class="ahref" style="color: #0066CC; font-size: 19px;">Read &#62;</a></p>
+            </div>
+            <div class="column" style="text-align: left;">
+                <p><a href="sources.html" class="ahref" style="color: #0066CC; font-size: 19px;">View Sources &#62;</a>
+                </p>
+            </div>
+        </div> -->
+
+    </div><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="content" id="content">
+        <h1>Introduction</h1>
+        <h3>What is an algorithm?</h3>
+        <p>An algorithm is a set of instructions followed to accomplish a task. For instance, take a trip from your
+            house to your school. It involves an algorithm of directions. You follow a particular code (set) of
+            instructions to reach your destination. In this example, it is simply the directions (left, right, etc.).
+            So, unknowingly, we all use algorithms in day-to-day life without even realizing it. The brain is indeed a
+            mystery. In the following lessons, I will be focussing on algorithms used to accomplish a task that you
+            provide to your computer. The algorithms mentioned further have been written in Python. However, pseudocode
+            has been used at some places for those without any experience in programming languages. 'Algorithms' is a
+            vast topic, thus I have covered only the important topics. View <a href="sources.html"
+                target="_blank">Sources</a> for
+            sources of this information.
+        </p><br>
+        <hr><br>
+        <h1>How are items stored in a computer?</h1>
+        <p>Imagine a computer to be a bookshelf that is already filled with some books, but is not full. The books that
+            already occupy the bookshelf are kept in a random order and not next to each other. Consider the items that
+            you want to be stored in the bookshelf to be books. Further explanation has been split into two datatypes:
+            arrays and lists to understand two different cases of memory storage.</p>
+        <h3>Arrays</h3>
+        <p>In arrays, their elements are stored one after the other on the shelf, just like books, in the order
+            specified. Take, for example, that there is a shelf and you have 10 books to be stored. But, the maximum
+            capacity for accommodating it in the bookshelf one after the other is seven (and the eighth position is
+            occupied by something else). The books cannot be stored in an array, thus leading to problems dealing with
+            memory. The elements cannot be spread over the place, like in the case of lists.</p>
+        <h3>Lists</h3>
+        <p>In lists, their elements are stored in order, but not necessarily one after the other. The elements are
+            spread over to occupy any given space. Take for example that there are 10 books to be arranged. But, the
+            maximum capacity for accommodating it in the bookshelf one after the other is seven (and the eighth position
+            is occupied by something else). In lists, the first seven elements get stored in the order provided, while
+            the other elements occur after the seventh position. One element stores the link of the next one.</p><br>
+        <hr><br>
+        <h1>Types of Searches</h1>
+        <p>Searching through long lists or arrays has always caused headaches to new programmers. There are mainly two
+            ways by which we can classify our methods to search a particular item in a long list.
+            These searches can be best depicted by a common game we might have played as children: the guessing game.
+            Consider that you are playing a game with your friend - you tell your friend to guess a number that you are
+            thinking about and give him a range (for example, 0 to 100). With each guess, you tell him/her if her guess
+            is too high or too low. If the guess is correct, you tell him to stop.</p>
+        <h3>Simple Search</h3>
+        <p>The simple search is a method of searching an element in the array right from the beginning. The search
+            starts from the first position (index 0) and keeps shifting by one position till the required element is
+            found. Thus, considering the above given example, the simple search starts from 0 and ends at 100 (till the
+            element is found).</p>
+        <h3>Binary Search</h3>
+        <p>The binary search starts at the arithmetic mean of the range. Considering the above example, the search
+            starts at 50. Then, a guess is made. If the guess is too low, the range (50-100) is considered. Else, the
+            range (0-50) is considered and the same algorithm is repeated.</p>
+
+        <h3>Algorithm running times grow at different rates</h3>
+        <p id="bigo">The binary search witnesses a low-slope increment in the number of functions it carries as well as
+            the time
+            as the number of items in the array increases. Thus, binary search provides a fast result.
+            Simple search, on the other hand, has a steeper slope when it comes to the number of tasks carried out.
+            Thus, it takes more time than binary search.</p>
+
+        <h3>The Big O</h3>
+        <p>The Big O notation is a simple method that tells you how fast a computer program runs. However, it doesn't
+            measure the time taken by the algorithm. It denotes the number of tasks that that particular algorithm
+            takes.</p>
+
+        <p>The following table depicts the run times for simple search and binary search.</p><br>
+        <div class="centroid">
+            <table style="width: 80%;">
+                <tr>
+                    <th>Simple Search</th>
+                    <th>Binary Search</th>
+                </tr>
+                <tr>
+                    <td>100 items —> 100 guesses</td>
+                    <td>100 items -> 7 guesses</td>
+                </tr>
+                <tr>
+                    <td>4,000,000,000 items —> 4,000,000,000 guesses</td>
+                    <td>4,000,000,000 items -> 32 guesses</td>
+                </tr>
+                <tr>
+                    <td>O(n)...Linear Time</td>
+                    <td>O(log n)…..Logarithmic Time</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <em>This table measures the maximum possible guesses it may take.</em>
+        <br>
+        <p>As you can see, binary search takes very few guesses, thus making it far more efficient than simple search.
+            However, everything has its own disadvantages. As binary search follows a complicated algorithm, it
+            increases the chances of bugs and errors. Simple search, after iterating over the complete array, reduces
+            the chances of any such bugs and errors to a negligible extent.</p>
+        <h3>Applications and need of such techniques</h3>
+        <p>Imagine yourself writing a program for social media websites. You have been assigned to write a program that
+            goes through an array of all users and provides the users relevant data of the value they input in a search
+            box. This is where your search algorithm comes into play. You must consider that you are working with arrays
+            with billions of elements in them. Thus, the speed should be fast and with minimum code.</p>
+        <h3>Some Common Big O run times</h3>
+        <p>From fastest to slowest<br>
+        <ol>
+            <li>O (log n), also known as log time. Example: Binary search.</li>
+            <li>O(n), also known as linear time. Example: Simple search.</li>
+            <li>O(n*log n). Example: A fast sorting algorithm, like quick-sort.</li>
+            <li>O(n^2). Example: A slow sorting algorithm, like selection sort.</li>
+            <li>O(n!). Example: A really slow algorithm, like the traveling salesperson.</li>
+        </ol>
+        </p><br>
+        <hr><br>
+        <h1>Algorithms for Arrays and Lists</h1>
+        <h3>Appendage and Insertions</h3>
+        <p>Appending elements means adding elements to the last of a pre-existing list. This activity is seen in nearly
+            all the programs that manage a database.<br>Insertions means inserting an element in any position in an
+            array/list.<br><br>
+            <b>Lists:</b> With the availability of free space anywhere in the computer (as mentioned in How Are Items
+            Stored in
+            a Computer), the newly appended elements can be arranged anywhere. Considering the general example, books
+            can be put in any available slot, it is that easy.<br><br><b>Arrays:</b> The same doesn't hold true for
+            arrays. If
+            consecutive space is not available to store the element(s) to be appended, the entire array has to be
+            shifted to some other place. Thus, the position of every element has to be
+            shifted.<br><br><b>Conclusion:</b> Lists are better than arrays in this respect.
+        </p>
+        <h3>Deletion</h3>
+        <p>Deletion is the process of deleting an element from an array/list. While appendage is not always possible
+            (due to insufficient memory or other conditions), deletion of any element in the list/array is always
+            possible.<br><br>
+            <b>Lists</b>: By deleting an element in a list, you just change what the previous elements point to. Thus,
+            it
+            becomes time and memory-efficient.<br><br>
+            <b>Arrays</b>: By deleting an element in an array, the entire array has to be moved up by one space. This
+            involves
+            a lot of processing and leads to a slow code when working with arrays containing billions of
+            elements.<br><br>
+            <b>Conclusion</b>: Thus, lists are definitely better than arrays when it comes to deletion.
+        </p>
+        <h4 class="t">Comparison of usage frequency of lists and arrays</h4>
+        <p>Usage of these datatypes heavily depends on the nature of the project you are working on. Arrays can store
+            data very compactly and are more efficient for storing large amounts of data. Arrays are great for numerical
+            operations; lists cannot directly handle math operations. For example, you can divide each element of an
+            array by the same number with just one line of code. However, lists are faster.<br>
+            Arrays see a lot of use. This is because it functions on the fundamentals of random access. On the other
+            hand, linked lists function on sequential access.</p>
+        <p><b>Sequential Access:</b> This process accesses the required element beginning from the start. Thinking of it
+            in
+            terms of bookshelf and books, it finds the required book after going through the entire bookshelf at least
+            once and then pointing that book out.<br><br>
+            <b>Random Access:</b> This process may begin at any position. It may directly jump to the eighth position,
+            saving
+            us a lot of time.
+        </p><br>
+        <hr id="recursion">
+        <br>
+        <h1>Recursion</h1>
+        <h3>What are recursive programs?</h3>
+        <p>Recursive programs are those which keep calling themselves until they are told to stop. If not stopped, they
+            can perform infinite loops.</p>
+        <div class="centroid">
+            <pre>
+                <code>
+def greet(name):
+    print(f"hello, {name}!")
+    greet2(name)
+    print("getting ready to say bye...")
+
+def greet2(name):
+    print((f"How are you {name}?"))
+
+    def bye():
+        print("ok bye!")
+    bye()
+
+greet(("Ved"))
+
+
+def fact(x): #fact -> factorial
+    if x == 1:
+        return 1
+    else:
+        return x * fact(x-1)
+
+print(fact(12))
+
+                </code>
+        </pre>
+        </div>
+        <h3>Cases in recursive code</h3>
+        <p><b>Recursive Case:</b> This is the case when the function calls itself and thus, leads to an infinite
+            loop.<br><br>
+            <b>Base Case</b>: This is the code that is added to the code block to prevent recursions.
+        </p><br>
+        <hr><br>
+        <h1>Stacking</h1>
+        <p>Stacking is a common terminology when you learn to program. It can be best explained with an analogy.<br>
+            Imagine that you are having a stack of playing cards with you. The elements in a list and arrays are stored
+            in the same way. There are two functions that you can perform with the given lists and arrays.</p>
+        <h3>Push</h3>
+        <p>It is the same as appending to the end of the list. For example, adding a card to the stack of cards.</p>
+        <h3>Pop</h3>
+        <p>It is reading the topmost element and then removing it. For example, this function reads the top-most card in
+            the stack and then pops it off the stack.</p>
+        <h3>How is this related to our topic?</h3>
+        <p>Well, it turns out that the functions that we write work in a similar manner. They get stacked one over the
+            other and are perceived by the computer in this way.</p>
+        <h3>Why is Stack Algorithm necessary to be known?</h3>
+        <p>With stack, you do not have to keep a check on the functions that have been completed. The stack function
+            does it for you.<br>
+            Using stack is convenient but there is a cost: saving all that info can take up a lot of memory. Each of
+            those function calls takes up some memory. At that point, you may choose any of the following courses:<br>
+        <ol>
+            <li>Rewrite the code to use a loop instead.</li>
+            <li>Use tail recursion. </li>
+        </ol>
+        </p>
+        <p>Both are equally effective and widely used. Tail recursion is supported by some languages, but not all of
+            them. Thus, the first course is suggested to new programmers.</p><br>
+        <hr><br>
+        <h1>Sorting Algorithms</h1>
+        <p>In this section, we will discuss different types of sorting algorithms.</p>
+        <h3>What are sorting algorithms?</h3>
+        <p>Suppose you are given a list and an array, each containing billions of elements. You are assigned to sort all
+            the elements in alphabetical order. To maximize your program, you use an algorithm that gets you the output
+            in the minimum time.</p>
+        <h3>What are different types of sorting algorithms?</h3>
+        <p>In this documentation, we will be broadly classifying the sorting algorithms into two parts:<br>
+        <ol>
+            <li>Selection sort</li>
+            <li>Quick sort</li>
+        </ol>
+        </p>
+        <h3>Introduction to Selection Sort</h3>
+        <p>This algorithm is neat-looking, but not necessarily fast. In this documentation, we will be focussing on
+            Quick Sort algorithms.</p>
+        <h3>Introduction to Quick Sort</h3>
+        <p>Quicksort is a well-known recursive technique used to solve problems. It is a type of Divide-and-Conquer
+            Technique (D&C). It is a sorting algorithm and a much faster one as compared to selection sort. It can be
+            solved in the following two ways:
+        <ol>
+            <li>Figure out the base case. It should be the simplest case.</li>
+            <li>Divide or decrease your problem until it becomes the base case</li>
+        </ol>
+        </p>
+        <h3>Application of Quicksort</h3>
+        <p>Imagine that you plot grounds for your company. One of your clients wants a piece of 600 meters x 400 meters
+            land divided into the largest possible number of squares. What is the length of such a square?<br>
+            I will let this question haunt your days and nights till you come up with the solution. Only then will you
+            be content to proceed with the following documentation.<br><b>Hint: It easier with GCF.</b></p>
+        <p>If you were able to solve the problem without the hint, give yourself a pat on the back. You are ready for
+            the rest of the documentation. If you weren't able to solve this problem, don't worry.
+        <ol>
+            <li><a href="https://khanacademy.org" target="_blank">Khanacademy.org</a> gives you an in-depth
+                understanding of such problems.</li>
+            <li>Or, refer to Indian Central Board books for Classes 7 and above. You will find your answer.</li>
+        </ol>
+        </p>
+
+    </div>
+
+    <br><br>
+    <div class="footer">
+        <p><br>
+            1. My name is Ved Panse.<br><br>
+            2. This is just a replication of Apple's original website.<br><br>
+            3. This is really good.<br><br>
+            4. This section is actually for policy and terms of service.<br><br>
+            5. Comment if you like it.
+        </p>
+    </div>
+
+</body>
+<script>
+    let condition_query = true
+    let bodyContent = document.querySelector("body").textContent.toLowerCase()
+    function search() {
+        document.getElementById("inp").classList.toggle("inp")
+        document.getElementById("inputter").focus()
+
+        if (document.getElementById("inp").style.display === "block") {
+            condition_query = true
+
+        } else {
+            condition_query = false
+        }
+    }
+
+    function query() {
+        const inp = document.getElementById("inputter")
+        inp.addEventListener("keyup", function (e) {
+            if (e.keyCode === 13) {
+                if (bodyContent.includes(inp.value.toLowerCase())) {
+                    ind = bodyContent.indexOf(inp.value)
+                    alert(true + ind)
+                } else {
+                    alert(false)
+                }
+            }
+        })
+    }
+
+    if (condition_query) {
+        query()
+    }
+</script>
+
+</html>
