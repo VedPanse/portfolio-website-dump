@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Ved Panse</title>
+</head>
+
+<style>
+    html,
+    body {
+        max-width: 100%;
+        height: 100%;
+        line-height: 2;
+        font-size: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
+        scroll-behavior: smooth;
+    }
+    
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background: rgb(248, 249, 250, 0.75);
+    }
+    
+    .navbar-nav {
+        position: absolute;
+        right: 2%;
+    }
+    
+    .starter {
+        text-align: center;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        position: relative;
+        padding-top: 18%;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, white, rgb(243, 243, 243));
+    }
+    
+    h3 {
+        font-weight: 100;
+        letter-spacing: 7px;
+    }
+    
+    .btn {
+        border-radius: 0;
+        padding: 10px 40px;
+    }
+    
+    .btn-dark {
+        background-color: black;
+    }
+    
+    .about {
+        margin-top: 15%;
+        padding-bottom: 5%;
+        border-bottom: 2px solid rgb(243, 243, 243);
+    }
+    
+    .about .left {
+        text-transform: uppercase;
+    }
+    
+    .about .row {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .progress-bar-success {
+        background-color: black;
+    }
+    
+    .progress {
+        height: 5px;
+        width: 75%;
+        margin-bottom: 5%;
+    }
+    
+    .left label {
+        font-size: 12px;
+    }
+    
+    .blog {
+        margin-top: 5%;
+        border-bottom: 1px solid #d2d2d7;
+    }
+    
+    .blog h3 {
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    .projects {
+        background-image: url("images/black-carbon.jpeg");
+        color: white;
+        padding: 5% 5%;
+    }
+    
+    button {
+        text-transform: uppercase;
+    }
+    
+    .blog .row {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .btn-outline-dark {
+        border: 2px solid black;
+        color: black;
+        font-weight: 500;
+        padding: 7px 60px;
+    }
+    
+    #contact form {
+        width: 80%;
+        margin: auto;
+    }
+    
+    #contact form input {
+        display: block;
+        margin-bottom: 10%;
+        border: none;
+        border-bottom: 1px solid #2b2b2e;
+        width: 100%;
+        background-color: transparent;
+    }
+    
+    textarea {
+        display: block;
+        margin-bottom: 2%;
+        border: none;
+        border-bottom: 1px solid #2b2b2e;
+        width: 100%;
+        background-color: transparent;
+    }
+    
+    #contact {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    
+    footer {
+        margin-top: 15%;
+        background-color: #f7f7f7;
+        padding: 5% 5%;
+    }
+    
+    img {
+        width: 100%;
+        height: 45%;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ved Panse</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About Me</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="starter" id="home">
+        <div class="vertical-center">
+            <h3>Hello There</h3>
+            <h1>I am Ved Panse</h1><br>
+            <button class="btn btn-dark">Read more</button>
+        </div>
+    </section>
+
+
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 left">
+                <h3>About Me</h3><br><br>
+                <label for="progress">HTML</label>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                    </div>
+                </div>
+
+                <label for="progress">CSS</label>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" style="width:99%">
+                    </div>
+                </div>
+
+                <label for="progress">JavaScript</label>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                    </div>
+                </div>
+
+                <label for="progress">Python</label>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                    </div>
+                </div>
+
+                <label for="progress">Kotlin</label>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <p>My name is Ved Panse. I am a young, passionate web designer and I wish to pursue expertise in AI. I started learning computer programming at 5 and I can't let go the interest. I have built premium websites and made open-source contributions
+                    on GitHub and CodePen.</p>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <p> Also, I have had internships with companies like WellsFargo, BancBridge and Magna. I look forward to convert my hobby and passion to my career.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="row">
+            <div class="col-lg-7 col-md-6">
+                <h3>PROJECTS</h3><br>
+                <p>I have created many projects on acquiring the skills that were then newly acquired. I uploaded some of them on my GitHub while others can be seen here.</p>
+                <button class="btn btn-light">View Projects</button>
+            </div>
+            <div class="col-lg-5 col-md-6">
+                <img>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <h3>My Blogs</h3><br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="images/algorithms-cover.jpeg">
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h3>ALGORITHMS EXPLAINED</h3><br>
+                <p>In this documentation, I will take you through the basics of algorithms. No experience in any computer programming language needed.</p>
+                <a href="algorithms/get-started.html"><button class="btn btn-outline-dark">VIEW</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" itemid="contact">
+        <h3 style="text-align: center;">CONTACT</h3><br><br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <form action="/" method="POST">
+                    <input name="name" type="text" placeholder="Name*">
+                    <input name="email" type="email" placeholder="Email*">
+                    <input name="subject" type="text" placeholder="Subject*">
+                    <textarea name="message" rows="4" placeholder="Message*"></textarea><br>
+                    <button type="submit" class="btn btn-dark">Send Message</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-6">
+
+            </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

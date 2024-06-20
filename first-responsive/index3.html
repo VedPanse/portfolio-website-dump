@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Ved Panse</title>
+    <style>
+        /* GLOBAL START */
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 2;
+        }
+        /* GLOBAL END */
+        /* NAVBAR START */
+        
+        .navbar {
+            position: fixed;
+            z-index: 5;
+            width: 100%;
+            background-color: rgb(248, 249, 250, 0.95);
+        }
+        
+        .navbar-brand,
+        .nav-link {
+            margin-right: 7%;
+        }
+        
+        .navbar-nav {
+            position: fixed;
+            margin-left: 30%;
+        }
+        /* NAVBAR END */
+        /* INTRODUCTION START */
+        
+        #intro {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: inline-block;
+            background-image: url("images/ved_panse.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        
+        #intro::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: -moz-linear-gradient(top, rgba(11, 84, 254, 0.5) 0%, rgba(252, 15, 192, 0.5) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(252, 15, 192, 0.5)), color-stop(100%, rgba(11, 84, 254, 0.5)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(11, 84, 254, 0.5) 0%, rgba(252, 15, 192, 0.5) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(11, 84, 254, 0.5) 0%, rgba(252, 15, 192, 0.5) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(11, 84, 254, 0.5) 0%, rgba(252, 15, 192, 0.5) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(11, 84, 254, 0.5) 0%, rgba(252, 15, 192, 0.5) 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        #intro .content {
+            width: 80%;
+            position: absolute;
+            text-align: center;
+            z-index: 2;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #intro .content h1 {
+            font-size: 5rem;
+        }
+        
+        #intro .content p {
+            font-size: 1.2rem;
+        }
+        
+        @-webkit-keyframes scroll {
+            0%,
+            20% {
+                -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+                transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+            }
+            10% {
+                -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+                transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+                transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+                opacity: 0.01;
+            }
+        }
+        
+        @keyframes scroll {
+            0%,
+            20% {
+                -webkit-transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+                transform: translateY(0px) scaleY(1) scaleX(1) translateZ(0px);
+            }
+            10% {
+                -webkit-transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+                transform: translateY(0px) scaleY(1.2) scaleX(1.2) translateZ(0px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+                transform: translateY(20px) scaleY(2.5) scaleX(0.5) translateZ(0px);
+                opacity: 0.01;
+            }
+        }
+        /* INTRODUCTION END */
+        /* ABOUT START */
+        
+        #about {
+            width: 100%;
+            height: 75%;
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+        
+        #about .row {
+            width: 90%;
+            margin: auto;
+        }
+        
+        #about .content {
+            margin-left: 5%;
+        }
+        /* ABOUT END */
+        /* PROJECTS START */
+        
+        #projects {
+            width: 100%;
+            height: 100%;
+            margin-top: 45%;
+            margin-bottom: 15%;
+            text-align: center;
+        }
+        
+        #projects .row {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding-top: 5%;
+        }
+        
+        #projects .row .col-lg-4 {
+            padding-right: 5%;
+        }
+        
+        #projects p {
+            text-align: justify;
+        }
+        
+        #projects .row i {
+            /* background: -webkit-linear-gradient(#0082d5, #a234d5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+            color: rgb(0, 122, 170);
+            text-align: center;
+        }
+        /* PROJECTS END */
+        /*BLOG START*/
+        
+        #blog {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #blog h1 {
+            text-align: center;
+            margin-bottom: 15%;
+        }
+        
+        #blog .row {
+            height: 100%;
+        }
+        
+        .algorithms {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: inline-block;
+            background-image: url("images/ved_panse.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        
+        .algorithms::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: -moz-linear-gradient(top, rgba(202, 48, 88, 0.75) 0%, rgba(255, 154, 72, 0.75) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 154, 72, 0.75)), color-stop(100%, rgba(202, 48, 88, 0.75)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(202, 48, 88, 0.75) 0%, rgba(255, 154, 72, 0.75) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(202, 48, 88, 0.75) 0%, rgba(255, 154, 72, 0.75) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(202, 48, 88, 0.75) 0%, rgba(255, 154, 72, 0.75) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(202, 48, 88, 0.75) 0%, rgba(255, 154, 72, 0.75) 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        .half-height {
+            height: 50%;
+        }
+        
+        #blog .minimalist {
+            width: 100%;
+            height: 50%;
+            position: relative;
+            display: inline-block;
+            background-image: url("images/ved_panse.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        
+        #blog .minimalist::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: -moz-linear-gradient(top, rgba(162, 52, 213, 0.75) 0%, rgba(215, 64, 89, 0.75) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(215, 64, 89, 0.75)), color-stop(100%, rgba(162, 52, 213, 0.75)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(162, 52, 213, 0.75) 0%, rgba(215, 64, 89, 0.75) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(162, 52, 213, 0.75) 0%, rgba(215, 64, 89, 0.75) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(162, 52, 213, 0.75) 0%, rgba(215, 64, 89, 0.75) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(162, 52, 213, 0.75) 0%, rgba(215, 64, 89, 0.75) 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        #blog .random {
+            width: 100%;
+            height: 50%;
+            position: relative;
+            display: inline-block;
+            background-image: url("images/ved_panse.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+        
+        #blog .random::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: -moz-linear-gradient(top, rgba(44, 214, 100, 0.75) 0%, rgba(0, 130, 213, 0.75) 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 130, 213, 0.75)), color-stop(100%, rgba(44, 214, 100, 0.75)));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(44, 214, 100, 0.75) 0%, rgba(0, 130, 213, 0.75) 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(44, 214, 100, 0.75) 0%, rgba(0, 130, 213, 0.75) 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(44, 214, 100, 0.75) 0%, rgba(0, 130, 213, 0.75) 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, rgba(44, 214, 100, 0.75) 0%, rgba(0, 130, 213, 0.75) 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        #blog .context {
+            padding: 5% 5%;
+        }
+        
+        #blog .content {
+            width: 80%;
+            position: absolute;
+            text-align: left;
+            z-index: 2;
+            padding: 35% 5%;
+        }
+        
+        #blog .btn {
+            border-radius: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        #blog .minimalist .content,
+        #blog .random .content {
+            position: absolute;
+            text-align: center;
+            z-index: 2;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .lowblog {
+                margin-top: 5%;
+            }
+        }
+        /*BLOG END*/
+        /* FOOTER START */
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 2% 5%;
+        }
+        
+        .footer .right {
+            text-align: right;
+        }
+        
+        .footer .right span {
+            margin-right: 5%;
+        }
+        /* FOOTER END */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Disabled</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--INTRODUCTION-->
+    <section id="intro">
+        <div class="content">
+            <h1>Ved Panse</h1>
+            <p>Aspiring Artificial Intelligence Expert</p>
+        </div>
+    </section>
+
+    <!--ABOUT ME-->
+
+    <section id="about">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="images/ved_panse.png" width="100%" height="100%">
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="content">
+                    <h1>About Me</h1><br>
+                    <p>
+                        My name is Ved Panse. I am a young, passionate web designer and I wish to pursue expertise in AI. I started learning computer programming at 5 and I can't let go the interest.<br><br> I have built premium websites and made open-source
+                        contributions on GitHub and CodePen. Also, I have had internships with companies like WellsFargo, BancBridge and Magna. I look forward to convert my hobby and passion to my career.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--BLOG-->
+
+    <section id="blog">
+        <h1>Blogs</h1>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 algorithms">
+                <div class="content">
+                    <h1>Algorithms Explained</h1><br>
+                    <p>Algorithms explained in simple words, my words. Join me as I take you along a wonderful journey of algorithms.</p><br>
+                    <a href="algorithms/index.html" target="_blank"><button class="btn btn-outline-light btn-lg">READ MORE</button></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 context">
+                        <h1>Believe in Minimalism</h1>
+                        <p>Believe in minimalism is a book written by ved panse.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 minimalist">
+                        <div class="content">
+                            <button class="btn btn-outline-light btn-lg">READ MORE</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 random lowblog">
+                        <div class="content">
+                            <button class="btn btn-outline-light btn-lg">READ MORE</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 context lowblog">
+                        <h1>Believe in Minimalism</h1>
+                        <p>Believe in minimalism is a book written by ved panse.</p>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-tags"></i></h1>
+                <h3>Amazon Price Tracker</h3>
+                <p>A program that takes in the budget of the user, the targeted item, and sends an email to the provided email address when the price of the item on Amazon falls below the budget. Built on Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="far fa-question-circle"></i></h1>
+                <h3>Quizzler</h3>
+                <p>A program that asks random questions to the user, using an API. Natively built on Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-birthday-cake"></i></h1>
+                <h3>Automatic Birthday Wisher</h3>
+                <p>A program that automatically wishes people on their birthday. It sends an email to the email address provided beforehand.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-satellite"></i></h1>
+                <h3>ISS Notifier</h3>
+                <p>A program that notifies you when the ISS is in close proximity with your position. Taking the current latitude and longitude of the user via input, it gets the position of the ISS through an API and emails the user on the email address
+                    provided beforehand when the ISS is overhead.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-heart"></i></h1>
+                <h3>Black Jack</h3>
+                <p>A program that plays Black Jack with you. This program has been written in Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-running"></i></h1>
+                <h3>Workout Tracker</h3>
+                <p>A program, that keeps in track your daily workout record and notifies you about your weekly progress. Written in Python, this program uses an interface from API provided by Sheety.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER
+        <section class="footer">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <h5>Ved Panse</h5>
+            </div>
+            <div class="col-lg-6 col-md-6 right">
+                <span>Home</span>
+                <span>Feautures</span>
+                <span>Pats</span>
+                <span>Persent</span>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

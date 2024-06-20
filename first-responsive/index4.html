@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <title>Ved Panse</title>
+
+    <style>
+        /* GLOBAL */
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 2;
+            background-color: rgb(248, 249, 250, 0.95);
+        }
+        
+        .navbar-nav {
+            position: absolute;
+            left: 40%;
+        }
+        /* INTRO */
+        
+        #intro {
+            width: 100%;
+            height: 100%;
+            background-image: url("images/ved_panse.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            color: white;
+        }
+        
+        #intro .overlay-bp {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgb(0, 130, 213, 0.75), rgb(162, 52, 213, 0.75));
+        }
+        
+        #intro .content {
+            margin: 0;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        #intro h1 {
+            font-size: 4rem;
+        }
+        
+        #intro p {
+            font-size: 1.15rem;
+        }
+        /* BLOG */
+        
+        #blog {
+            margin-top: 15%;
+            position: relative;
+            margin-bottom: 15%;
+            height: 100%;
+        }
+        
+        #blog .main {
+            width: 100%;
+            height: 100%;
+        }
+        
+        #blog .algorithms {
+            background-image: url(images/ved_panse.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #blog .algorithms,
+            #blog .minimalism {
+                height: 500px;
+            }
+            #about {
+                margin-top: 70%;
+            }
+        }
+        
+        #blog .algorithms .overlay-ro {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+            background-image: linear-gradient(to bottom, rgb(202, 53, 8, 0.75), rgb(255, 154, 72, 0.75));
+        }
+        
+        #blog .overlay-ro .content {
+            width: 80%;
+            margin: auto;
+            color: white;
+            padding-top: 5%;
+        }
+        
+        #blog .minimalism {
+            width: 100%;
+            height: 50%;
+            background-image: url(images/ved_panse.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            position: relative;
+        }
+        
+        #blog .minimalism .overlay-vr {
+            margin: 0;
+            background-image: linear-gradient(to bottom, rgb(162, 52, 213, 0.75), rgb(215, 64, 89, 0.75));
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+        }
+        
+        #blog .rightrow {
+            height: 100%;
+        }
+        
+        #blog .btn {
+            border-radius: 40px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #blog .random {
+            width: 100%;
+            height: 50%;
+            background-image: url(images/ved_panse.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            position: relative;
+        }
+        
+        #blog .random .overlay-gb {
+            margin: 0;
+            background-image: linear-gradient(to bottom, rgb(44, 214, 100, 0.75), rgb(0, 130, 213, 0.75));
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0%;
+        }
+        
+        #blog .context {
+            padding: 5% 5%;
+        }
+        /* ABOUT */
+        
+        #about {
+            width: 100%;
+            height: 100%;
+            margin-top: 15%;
+            position: relative;
+        }
+        
+        #about .context {
+            padding: 5% 5%;
+        }
+        /* PROJECTS */
+        
+        #projects {
+            width: 100%;
+        }
+        
+        #projects .row {
+            width: 80%;
+            height: 100%;
+            margin: auto;
+        }
+        
+        #projects h1 {
+            text-align: center;
+            color: rgb(3, 95, 187);
+        }
+        
+        #projects h3 {
+            text-align: center;
+        }
+        
+        #projects p {
+            text-align: justify;
+        }
+        /* CONTACT */
+        /* FOOTER */
+        
+        footer {
+            background-color: #f8f9fa;
+            padding: 1% 1%;
+        }
+        
+        footer a {
+            font-size: 15px;
+            margin-right: 5%;
+            color: black;
+        }
+        
+        footer .row {
+            width: 100%;
+        }
+        
+        footer .right {
+            position: absolute;
+            right: 1%;
+        }
+        
+        footer a:hover {
+            text-decoration: none;
+        }
+        /*  INTERN */
+        
+        #intern {
+            width: 100%;
+            color: white;
+            position: relative;
+        }
+        
+        #intern .bancbridge {
+            background-image: url(images/ved_panse.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        
+        #intern .bancbridge .overlay {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgb(0, 130, 213, 0.75), rgb(162, 52, 213, 0.75));
+            padding: 10%;
+        }
+        
+        #intern .magna {
+            background-image: url(images/ved_panse.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+        }
+        
+        #intern .magna .overlay {
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to left, rgb(0, 130, 213, 0.75), rgb(162, 52, 213, 0.75));
+            padding: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#intro">Home</a>
+                    <a class="nav-link" href="#about">About Me</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#blogs">Blogs</a>
+                    <a class="nav-link" href="#intern">Internships</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="intro">
+        <div class="overlay-bp">
+            <div class="content">
+                <h1>Ved Panse</h1>
+                <p>Aspriring Artificial Intelligence Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <img src="images/ved_panse.png" width="100%" height="100%">
+            </div>
+            <div class="col-lg-6 col-md-6 context">
+                <h1>About Me</h1>
+                <p>
+                    My name is Ved Panse. I am a young, passionate web designer and I wish to pursue expertise in AI. I started learning computer programming at 5 and I can't let go the interest.<br><br> I have built premium websites and made open-source
+                    contributions on GitHub and CodePen. Also, I have had internships with companies like WellsFargo, BancBridge and Magna. I look forward to convert my hobby and passion to my career.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h1 style="color: black;">Projects</h1><br><br><br>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-tags"></i></h1>
+                <h3>Amazon Price Tracker</h3>
+                <p>A program that takes in the budget of the user, the targeted item, and sends an email to the provided email address when the price of the item on Amazon falls below the budget. Built on Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="far fa-question-circle"></i></h1>
+                <h3>Quizzler</h3>
+                <p>A program that asks random questions to the user, using an API. Natively built on Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-birthday-cake"></i></h1>
+                <h3>Automatic Birthday Wisher</h3>
+                <p>A program that automatically wishes people on their birthday. It sends an email to the email address provided beforehand.</p>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-satellite"></i></h1>
+                <h3>ISS Notifier</h3>
+                <p>A program that notifies you when the ISS is in close proximity with your position. Taking the current latitude and longitude of the user via input, it gets the position of the ISS through an API and emails the user on the email address
+                    provided beforehand when the ISS is overhead.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-heart"></i></h1>
+                <h3>Black Jack</h3>
+                <p>A program that plays Black Jack with you. This program has been written in Python.</p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h1><i class="fas fa-running"></i></h1>
+                <h3>Workout Tracker</h3>
+                <p>A program, that keeps in track your daily workout record and notifies you about your weekly progress. Written in Python, this program uses an interface from API provided by Sheety.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="blog">
+        <h1 style="text-align: center;">Blogs</h1><br><br><br>
+        <div class="row main">
+            <div class="col-lg-6 col-md-6 algorithms col-sm-6">
+                <div class="overlay-ro">
+                    <div class="content">
+                        <h1>Algorithms Explained</h1>
+                        <p>Algorithms explained in simple words, my words. Join me as I take you along a wonderful journey of algorithms.</p>
+                        <button class="btn btn-outline-light btn-lg">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="row rightrow">
+                    <div class="col-lg-6 col-md-6 context">
+                        <h1>Believe in Minimalism</h1>
+                        <p>This book was written by me and it was excellent outstanding.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 minimalism col-sm-6">
+                        <div class="overlay-vr">
+                            <div class="content">
+                                <button class="btn btn-outline-light btn-lg">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 random col-sm-6">
+                        <div class="overlay-gb">
+                            <div class="content">
+                                <button class="btn btn-outline-light btn-lg">Read More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 context col-sm-6">
+                        <h1>Believe in Minimalism</h1>
+                        <p>This book was written by me and it was excellent outstanding.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section id="intern">
+        <div class="row">
+            <div class="col-lg-12 bancbridge">
+                <div class="overlay">
+                    <h1>BancBridge</h1>
+                </div>
+            </div>
+            <div class="col-lg-12 magna">
+                <div class="overlay">
+                    <h1>Magna</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <footer>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <h5>Ved Panse</h5>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 right">
+                <a href="#intro">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#intern">Internships</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
