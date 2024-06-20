@@ -1,527 +1,180 @@
 html,
 body {
-    width: 100vw;
-    min-height: 100vh;
-    color: white;
-    background-color: black;
-    line-height: 2;
-}
-
-#start {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/ved_panse.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-}
-
-.navbar {
-    background-color: transparent;
-    backdrop-filter: blur(75px);
-    background-color: rgb(0, 0, 0, 0.3);
-    border-bottom: 1px solid rgb(255, 255, 255, 0.15);
-    position: fixed;
+    background-color: white;
+    min-height: 100%;
+    max-width: 100%;
     width: 100%;
-    padding: 30px;
-    z-index: 1000;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    line-height: 1.7;
 }
 
-.navbar .nav-link.nav-item {
-    color: white !important;
+
+/* font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif; */
+
+.main-nav {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.sub-nav {
+    background-color: rgb(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: rgba(0, 0, 0, 0.5);
+}
+
+.sub-nav .navbar-brand {
+    font-weight: 500;
+}
+
+.main-nav a.nav-link {
+    color: #cdcdce !important;
     font-size: 12px;
-    margin: 1.5%;
 }
 
-.navbar-brand {
-    color: white;
+.main-nav a.nav-link,
+.main-nav a.navbar-brand {
+    padding: 0%;
+}
+
+.main-nav a.nav-link:hover {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.navbar-brand:hover {
+    text-decoration: none !important;
+}
+
+.main-nav a.active {
+    color: white !important;
+}
+
+a.nav-link {
+    font-size: 12px;
+    margin-right: 7%;
+    padding: 20px;
+    letter-spacing: 0.25px;
 }
 
 .navbar-nav {
-    position: absolute !important;
-    left: 50%;
-    transform: translate(-20%, 0%);
-    width: 100%;
+    position: absolute;
+    right: 7%;
 }
 
-.left {
-    background-color: transparent;
-    backdrop-filter: blur(75px);
-    background-color: rgb(0, 0, 0, 0.2);
-    border-right: 1px solid rgb(255, 255, 255, 0.15);
-    position: fixed;
-    height: 100%;
-    left: 0%;
-    top: 0%;
-    z-index: 3;
+.navbar-brand {
+    margin-left: 7%;
 }
 
-.right {
-    background-color: transparent;
-    backdrop-filter: blur(75px);
-    background-color: rgb(0, 0, 0, 0.2);
-    border-left: 1px solid rgb(255, 255, 255, 0.15);
-    position: fixed;
-    height: 100%;
-    right: 0%;
-    top: 0%;
-    z-index: 3;
+.navbar {
+    padding: 5px;
 }
 
-.bottom {
-    background-color: transparent;
-    backdrop-filter: blur(75px);
-    background-color: rgb(0, 0, 0, 0.2);
-    border-top: 1px solid rgb(255, 255, 255, 0.15);
-    position: fixed;
-    padding: 1%;
-    width: 100%;
-    left: 0%;
-    bottom: 0%;
-    z-index: 3;
+.nav-item.nav-link {
+    padding: 5px 11px 6px;
+    margin: 0px 4px;
+    border-radius: 4px;
+}
+
+.sub-nav a.nav-link:hover {
+    color: #0070c9 !important;
+    text-decoration: none !important;
+}
+
+.bold-center {
+    font-weight: 450;
     text-align: center;
-}
-
-.chevron {
-    width: 50%;
-    position: absolute;
-    height: 17%;
-    top: 70%;
-    left: 0%;
-    background-color: rgb(119, 43, 226);
-    /* , rgb(153, 43, 226) */
-    z-index: 3;
-}
-
-.overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.6), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-.chevron h1 {
-    font-size: 102px;
-    position: absolute;
-    right: -20%;
-}
-
-.thinner {
-    font-weight: 100;
-}
-
-.arr {
-    position: relative;
-    top: 45%;
-    width: 4.5vw;
-    max-width: 50px;
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(119, 43, 226);
-    /* , rgb(147, 43, 226) */
-}
-
-.over .main {
-    position: absolute;
-    z-index: 2;
-    top: 15%;
-    left: 4.5vw;
-}
-
-.over .main a {
-    margin-right: 40px;
-    color: white;
-}
-
-.over .main a:hover {
-    text-decoration: none;
-}
-
-.w3r-dot {
-    width: 5%;
-    height: 100%;
-    background-color: transparent;
-    background-image: radial-gradient(rgb(82, 81, 81) 10%, transparent 11%), radial-gradient(rgb(82, 81, 81) 10%, transparent 11%);
-    background-size: 15px 15px;
-    background-position: 0 0, 30px 30px;
-    background-repeat: repeat;
-    position: absolute;
-    right: 5vw;
-    top: 10%;
-}
-
-.tools {
-    padding: 20px;
-    position: relative;
-    top: -80%;
-    position: absolute;
-    right: 20vw;
-}
-
-.tools .search {
-    background-color: rgb(119, 43, 226);
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-
-.tools .search svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.tools .share {
-    background-color: white;
-    border-radius: 100%;
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-
-.tools .share svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-a {
-    color: white;
-}
-
-a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.left-runner {
-    position: absolute;
-    left: 5vw;
-    top: 10%;
-}
-
-#about {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/blue.jpeg);
-    /* https://wallpaperaccess.com/full/4871219.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-h1.centroid {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 102px;
-    text-align: center;
-}
-
-#about .overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.2), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-.chunk p {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.button {
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: absolute;
-    right: 5%;
-}
-
-.legacy {
-    border: 1px solid blue;
-}
-
-.legacy:hover {
-    background-color: blue !important;
-    color: white !important;
-}
-
-.button:hover {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-}
-
-.overbar {
-    padding-top: 10px;
-}
-
-.blue {
-    border-top: 2px solid blue;
-}
-
-.overbar.white {
-    border-top: 2px solid white;
-    padding-top: 10px;
-}
-
-.chunk.right-chunk {
-    position: absolute;
-    bottom: 10%;
-    right: 5vw;
-}
-
-#intern {
-    min-height: 100vh;
-    width: 100vw;
-    /* background-image: url(../images/blue.jpeg); */
-    /* https://wallpaperaccess.com/full/4871219.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.bottom a {
-    padding: 20px;
-    border: transparent;
-}
-
-.bottom a.activate-blue {
-    background-image: linear-gradient(to bottom right, rgb(0, 0, 161), rgb(30, 68, 255));
-}
-
-.bottom a.activate-red {
-    background-image: linear-gradient(to bottom right, #DC143c, orangered);
-}
-
-.bottom a.activate-violet {
-    background-image: linear-gradient(to top left, #8b16c5, rgb(195, 43, 226));
-}
-
-.bottom a.activate-yellow {
-    background-image: linear-gradient(to bottom right, rgb(208, 177, 0), orange);
-}
-
-.bottom a.activate-green {
-    background-image: linear-gradient(to top left, #38fe77, rgb(1, 130, 23));
-}
-
-.bottom a.activate-orange {
-    background-image: linear-gradient(to right, orange, orangered);
-}
-
-#current-div {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/red.jpeg);
-    /* https://wallpapercave.com/wp/wp9521361.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-    display: none;
-}
-
-#skills-div .overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.2), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-#skills-div {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/purple.jpeg);
-    /* https://wallpaperaccess.com/full/1106629.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-    display: none;
-}
-
-.overbar.crimson {
-    border-top: 1px solid #DC143C;
-}
-
-.overbar.viola {
-    border-top: 1px solid blueviolet;
-}
-
-.overbar.sulphur {
-    border-top: 1px solid gold;
-}
-
-.overbar.emerald {
-    border-top: 1px solid springgreen;
-}
-
-.overbar.sun {
-    border-top: 1px solid orangered;
-}
-
-.lunatic {
-    border: 1px solid #DC143C;
-}
-
-.hydro {
-    border: 1px solid blueviolet;
-}
-
-.lunatic:hover {
-    background-color: #DC143C;
-    color: white;
-}
-
-.hydro:hover {
-    background-color: blueviolet;
-    color: white;
-}
-
-.yellow {
-    border: 1px solid rgb(208, 177, 0);
-}
-
-.yellow:hover {
-    background-color: rgb(208, 177, 0);
-    color: white;
-}
-
-.green {
-    border: 1px solid rgb(1, 130, 23);
-}
-
-.green:hover {
-    background-color: rgb(1, 130, 23);
-    color: white;
-}
-
-.orange {
-    border: 1px solid orangered;
-}
-
-.orange:hover {
-    background-color: orangered;
-    color: white;
-}
-
-div.on-scroll {
-    display: none;
-}
-
-.chunk {
-    backdrop-filter: blur(100px);
-    padding: 20px;
-    width: 28vw;
-}
-
-.progress-bar-success {
-    background-color: white;
-}
-
-.progress {
-    height: 2px;
-    margin-bottom: 5%;
-    background-color: #333;
-}
-
-label {
-    font-size: 14px;
-}
-
-#intern-div .overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.2), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-#intern-div {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/yellow.jpeg);
-    /* https://wallpapercave.com/wp/wp7242467.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-    display: none;
-}
-
-#contact {
-    min-height: 100vh;
-    width: 100vw;
-    margin-bottom: 10%;
-}
-
-div.title {
-    position: absolute;
-    right: 10vw;
-    top: 50vh;
-}
-
-.social svg {
-    width: 50%;
-    min-width: 18.46px;
+    font-size: 72px;
     margin: auto;
-    margin-bottom: 50%;
 }
 
-.social {
-    position: absolute;
-    top: 13%;
-    left: 1vw;
+.master {
+    width: 100vw;
+    height: 100vh;
 }
 
-.bi.bi-chevron-double-down {
-    position: absolute;
-    top: 50%;
-    transform: translate(0%, -50%);
+.content {
+    width: 45%;
+    margin: auto;
 }
 
-a.roller img {
-    width: 100%;
-    height: auto;
+.content h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 450;
+    width: 65%;
+    margin: auto;
 }
 
-.underline {
-    position: fixed;
-    background-color: white;
-    height: 2px;
-    width: 50px;
-    top: 2%;
-    z-index: 1000;
+.content h3 {
+    font-size: 24px !important;
 }
 
-#contact button {
-    border: none;
-    background-color: transparent;
-    color: rgb(119, 43, 226);
+.content a {
+    color: #0070c9;
+    text-decoration: none;
 }
 
-#contact button:hover {
+.content a:hover {
     text-decoration: underline;
 }
 
-.form-signin {
+.content p {
+    font-size: 17px;
+    line-height: 2;
+}
+
+div.car {
+    width: 100vw;
+    height: 80vh;
+}
+
+img {
+    border-radius: 15px;
     width: 100%;
+}
+
+.s1 {
+    margin-bottom: 3.5%;
+}
+
+div {
+    display: block;
+}
+
+.sub-content {
+    margin-bottom: 10%;
+}
+
+#about-me {
+    position: relative;
+    height: 90vh;
+}
+
+.centroid {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+}
+
+.bg {
+    background-color: #e5eae9;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.bg h1 {
+    text-align: left;
+    margin-top: 20%;
+}
+
+.bg .content {
+    width: 75%;
+}
+
+.form-signin {
+    width: 50%;
     padding: 15px;
     margin: auto;
 }
@@ -554,187 +207,142 @@ a.roller img {
 .form-signin input,
 .form-signin textarea {
     background-color: transparent;
-    border: 1px solid white;
-    color: white;
-}
-
-.form-signin input:focus,
-.form-signin textarea:focus {
-    background-color: transparent;
-    color: white;
+    border: 1px solid black;
 }
 
 label {
+    color: #212121;
+}
+
+.btner {
+    padding: 0px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#46b8da), to(#0293dc));
     color: white;
+    border: transparent;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+a:hover {
+    text-decoration: underline !important;
 }
 
 a {
     text-decoration: none !important;
 }
 
-.bi.bi-chevron-double-up {
-    position: absolute;
-    left: 1.75%;
-    top: 50%;
-    transform: translate(0%, -50%);
-    display: none;
-}
-
-#quiz-div .overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.2), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-#quiz-div {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/tesseract.png);
-    /* https://c.wallhere.com/photos/6d/4f/Minecraft_creeper_green_ore-64295.png!d */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-    display: none;
-}
-
-#language-div .overlay-dark {
-    background-image: linear-gradient(to right, #000000e6, rgba(0, 0, 0, 0.2), #000000e6);
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-
-#language-div {
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url(../images/orange.jpeg);
-    /* https://wallpapercave.com/wp/wp7242467.jpg */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-bottom: 10%;
-    display: none;
-}
-
-.top-left,
-.top-right,
-.bottom-left,
-.bottom-right {
-    position: absolute;
-    background-color: rgb(255, 255, 255, 0.15);
-    width: 1px;
-    height: 100%;
-    top: 0%;
-}
-
-#start .over .main {
-    z-index: 100;
-}
-
-.search:hover {
-    cursor: pointer;
-}
-
-#search-form {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    border-radius: 5px;
-    z-index: 1000;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-}
-
-#search-form input {
-    background-color: transparent;
-    border: transparent;
-    backdrop-filter: blur(100px);
-    width: 50vw;
-    border: 1px solid white;
-    color: white;
-}
-
-#form-close {
-    text-align: right;
-}
-
-#form-close:hover {
-    cursor: pointer;
-}
-
-.share:hover {
-    cursor: pointer;
-}
-
-.aspiring {
-    position: absolute;
-    max-width: 20vw;
-    right: 7vw;
-    top: 20%
-}
-
-.menu-container {
-    display: none;
-    cursor: pointer;
-    position: fixed;
-    right: 1%;
-    top: 3%;
-    z-index: 100000000;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-    width: 20px;
-    height: 1px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-
-/* RESPONSIVENESS */
-
 @media screen and (max-width: 991px) {
-    .navbar {
-        padding: 5px;
-    }
-    .underline {
+    .sub-nav {
         display: none;
+    }
+    .navbar-nav {
+        background-color: black !important;
     }
 }
 
-@media screen and (max-width: 773px) {
-    .over .main {
-        display: none;
+.progress-bar-success {
+    background-color: black;
+}
+
+.progress {
+    height: 2px;
+    margin-bottom: 5%;
+    background-color: #d2d2d7;
+}
+
+label {
+    font-size: 14px;
+}
+
+.spider .right {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.spider .row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.spider .col-md-6,
+.spider .col-lg-12 {
+    padding: 3%;
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        width: 80%;
     }
-    .aspiring {
-        right: 50vw;
-        max-width: 50vw;
-    }
-    .chevron h1 {
-        font-size: 72px;
-    }
-    .tools {
-        display: none;
-    }
-    .arr {
-        min-width: 15px;
-    }
-    h1.centroid {
-        font-size: 32px;
-        top: 0%;
-        right: 5vw;
-    }
-    .chunk.right-chunk {
-        width: 50vw;
-    }
-    .menu-container {
-        display: inline-block;
-    }
+}
+
+.card {
+    background-color: #f8f8f8;
+    padding: 10%;
+    border-radius: 16px;
+    border-color: transparent;
+    text-align: center;
+    min-height: 100%;
+}
+
+.card h6 {
+    font-size: 15px;
+}
+
+.card p {
+    color: #666666;
+    letter-spacing: 1.2;
+}
+
+.card a,
+.card p {
+    font-size: 13px;
+    display: block;
+}
+
+.col-lg-6,
+.col-lg-12 {
+    margin-top: 15px;
+    min-height: 100% !important;
+    position: relative;
+}
+
+#footer {
+    background-color: #f5f5f7;
+    padding: 2%;
+}
+
+.foot-c {
+    color: #6e6e73;
+    width: 60%;
+    margin: auto;
+    font-size: 12px;
+}
+
+.foot-c p b {
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.foot-c a {
+    color: #3f3f42;
+    display: block;
+    margin: 2% 0%;
+}
+
+li {
+    line-height: 3;
+}
+
+#contact button {
+    border: none;
+    background-color: transparent;
+    color: #06c;
+}
+
+#contact button:hover {
+    text-decoration: underline;
 }
