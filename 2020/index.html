@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background-color: black;
+
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: transparent;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: none;
+      }
+    }
+
+    .warning {
+      display: none;
+    }
+
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    .header span {
+      color: orangered;
+    }
+
+    .name {
+      position: absolute;
+      top: 35%;
+      left: 10%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      width: 50%;
+    }
+
+    .name h1 {
+      font-size: 72px;
+    }
+
+    .sep {
+      border: 1px solid orangered;
+      width: 20%;
+      display: inline-block;
+      margin-top: 1px;
+    }
+
+    .read {
+      position: absolute;
+      right: 0%;
+
+    }
+
+    .social {
+      transform: rotate(-90deg);
+
+
+      /* Legacy vendor prefixes that you probably don't need... */
+
+      /* Safari */
+      -webkit-transform: rotate(-90deg);
+
+      /* Firefox */
+      -moz-transform: rotate(-90deg);
+
+      /* IE */
+      -ms-transform: rotate(-90deg);
+
+      /* Opera */
+      -o-transform: rotate(-90deg);
+
+      /* Internet Explorer */
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      position: absolute;
+      left: -3%;
+      top: 85%;
+    }
+
+    .scroll {
+      transform: rotate(-90deg);
+
+
+      /* Legacy vendor prefixes that you probably don't need... */
+
+      /* Safari */
+      -webkit-transform: rotate(-90deg);
+
+      /* Firefox */
+      -moz-transform: rotate(-90deg);
+
+      /* IE */
+      -ms-transform: rotate(-90deg);
+
+      /* Opera */
+      -o-transform: rotate(-90deg);
+
+      /* Internet Explorer */
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+      position: absolute;
+      top: 85%;
+      left: 92%;
+    }
+
+    #aboutme {
+      position: absolute;
+      top: 110%;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: transparent;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: gray;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav .active {
+      color: white;
+    }
+
+    .topnav a:hover {
+      /* background-color: rgb(136, 128, 128); */
+      color: #d2d2d7;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .card {
+      position: absolute;
+      top: 175%;
+      margin-top: 0%;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 15%;
+      line-height: 2;
+      font-weight: 475;
+    }
+
+    .pink {
+      background-image: linear-gradient(to bottom right, rgb(255, 0, 149), rgb(255, 106, 205));
+      left: 40%;
+    }
+
+    .green {
+      background-image: linear-gradient(to bottom right, springgreen, lime);
+      left: 60%;
+    }
+
+    .blue {
+      background: rgb(2, 0, 36);
+      background: linear-gradient(to bottom right, rgba(2, 0, 36, 1) 0%, rgba(241, 0, 238, 1) 0%, rgba(0, 212, 255, 1) 100%);
+      left: 80%;
+    }
+
+    .more-skills {
+      position: absolute;
+      top: 590%;
+      left: 5%;
+    }
+
+    th,
+    td {
+      padding-right: 90px;
+    }
+
+    table {
+      width: 60%;
+      line-height: 2;
+    }
+
+    .code-social {
+      position: absolute;
+      top: 700%;
+      left: 80%;
+    }
+
+    #extra-curricular {
+      position: absolute;
+      top: 300%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="#default" class="logo">Ved panse <span style="font-size: 40px;">.</span></a>
+    <div class="header-right">
+      <a class="active" href="index.html">home <span>+</span></a>
+      <a href="contact.html">contact <span>+</span></a>
+    </div>
+  </div>
+  <div id="home">
+    <div class="name">
+      <span style="font-size: 20px; color: gray; text-transform: none;">Aspiring Artificial Intelligence Expert</span>
+      <h1>Ved<br>Panse</h1><br>
+      <div class="read">
+        <span style="text-transform: none;">Read More</span>
+        <hr class="sep">
+      </div>
+    </div>
+
+    <div class="social">
+      <p style="display:inline; padding-right: 20px;">facebook</p>
+      <p style="display:inline;">instagram</p>
+    </div>
+
+    <div class="scroll">
+      <p>
+        &#8592; Scroll down</p>
+    </div>
+  </div>
+  <div id="aboutme">
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">HTML</a>
+      <a class="active">CSS</a>
+      <a>Python</a>
+      <a class="active">JavaScript</a>
+      <a>Kotlin</a>
+      <a>Node JS</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <p style="font-size: 12px; position: absolute; top: 160%; left: 10%; margin-bottom: 0%;"><b>SKILLS THAT I
+        ACQUIRED</b></p>
+    <h1 style="font-size: 72px; position: absolute; top: 175%; left: 5%; margin-top: 0%;"><span
+        style="font-size: 92px;">S</span>kills</h1>
+    <div class="card pink">
+      <h3>Wellsfargo</h3>
+      <p>I created a SMTP server webpage which is being used by Wellsfargo.</p>
+    </div>
+    <div class="card green">
+      <h3>BancBridge</h3>
+      <p>I created website design for BancBridge Software Systems.</p>
+    </div>
+
+    <div class="card blue">
+      <h3>CodePen</h3>
+      <p>I made some open-source contributions on CodePen.</p>
+    </div>
+
+    <div class="more-skills">
+      <table>
+        <tr style="width: 50%;">
+          <th>
+            Programming Languages
+          </th>
+          <th>Algorithms</th>
+        </tr>
+        <tr style="width: 50%;">
+          <td>
+            <p>I did certificate courses for all the programming languages that I learnt from Udemy.</p>
+          </td>
+          <td>
+            <p>I learnt Algorithms from O'reilly.</p>
+          </td>
+        </tr>
+      </table>
+      <h1>since 2010</h1>
+    </div>
+
+
+    <div class="code-social">
+      <img src="codepen.png" width="15%">
+      <img src="github.png" width="15%">
+    </div>
+  </div>
+
+  <div id="extra-curricular">
+    <h1 style="font-size: 72px; text-align: center;">Why do I want to be an AI Expert?</h1><br><br><br><br>
+    <div>
+      <img src="ai.png" style="position: absolute; left: 60%; width: 50%;" id="ai">
+      <div style="margin-left: 10%; position: absolute; top: 99%;">
+        <h2 style=" font-size: 30px;"><span style="padding-top: 25px; border-top: 2px solid rgb(0, 174, 255);">01</span>
+        </h2>
+        <p>
+          I have always been fascinated by virtual assisstants, especially Siri
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
